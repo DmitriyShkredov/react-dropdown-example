@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import Dropdown from "react-dropdown";
+import { Post } from "./Post/Post";
+import "./App.css";
+
+import type { Option } from "react-dropdown";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const defItem: Option = { value: "", label: "123" };
+  const [state, setState] = useState(defItem);
+  const options = [
+    { value: "cat1", label: "Категория 1" },
+    { value: "cat2", label: "Категория 2" },
+    { value: "cat3", label: "Категория 3" },
+    { value: "cat4", label: "Категория 4" },
+  ];
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <header className="header">
+        <Dropdown
+          options={options}
+          onChange={(item) => setState(item)}
+          value={state}
+          placeholder="Выбор категории"
+        />
+      </header>
+      <section className="content">
+        <Post />
+        <Post />
+        <Post />
+        <Post />
+      </section>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

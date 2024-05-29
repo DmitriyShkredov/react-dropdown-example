@@ -1,42 +1,74 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  background-color: #0018cf;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.content {
+  padding-top: 55px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Dropdown-root {
+  position: relative;
+  min-width: 150px;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.Dropdown-control {
+  padding: 8px 28px 8px 20px;
+  background-color: #fff;
+  font-size: 18px;
+  color: #000;
+  border-radius: 7px;
 }
 
-.card {
-  padding: 2em;
+.Dropdown-menu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 7px;
+  border: 1px solid #c7c7c7;
+  overflow: hidden;
 }
 
-.read-the-docs {
-  color: #888;
+.Dropdown-arrow {
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  width: 20px;
+  height: 20px;
+  /* background-color: #000; */
+  background-image: url("/images/dropdown-icon.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: 50% 50%;
+  transition: transform 0.2s;
+}
+
+.is-open .Dropdown-arrow {
+  transform: translateY(-50%) rotate(0);
+}
+
+.Dropdown-option {
+  padding: 8px 20px;
+  font-size: 17px;
+  color: #000;
+}
+
+.Dropdown-option:hover {
+  background-color: #addba8;
+}
+
+.Dropdown-option.is-selected {
+  background-color: #dfdfdf;
 }
