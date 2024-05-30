@@ -25,3 +25,19 @@ body {
 * {
   box-sizing: border-box;
 }
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 55px;
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  background-color: #073a92;
+}
+
+.content {
+  padding-top: 55px;
+}
