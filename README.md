@@ -2,7 +2,7 @@
 
 #### `Demo:` https://dmitriyshkredov.github.io/react-dropdown-example/
 
-#### `Телеграм:` [@tipichnyj_web_razrabotchik](https://t.me/tipichnyj_web_razrabotchik)
+#### `Телеграм:` [@tipichnyj_web_razrabotchik](https://t.me/tipichnyj_web_razrabotchik/86)
 
 #### `Видео:` [YouTube](https://youtu.be/f228Z-u4dwQ)
 
