@@ -13,23 +13,6 @@
   border-radius: 7px;
 }
 
-.Dropdown-menu {
-  position: absolute;
-  left: 0;
-  top: 100%;
-  width: 100%;
-  background-color: #fff;
-  border-radius: 7px;
-  border: 1px solid #c7c7c7;
-  overflow: hidden;
-}
-
-.Dropdown-title {
-  background-color: grey;
-  padding: 4px;
-  text-align: center;
-}
-
 .Dropdown-arrow {
   position: absolute;
   top: 50%;
@@ -47,6 +30,23 @@
 
 .is-open .Dropdown-arrow {
   transform: translateY(-50%) rotateX(-180deg);
+}
+
+.Dropdown-menu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 7px;
+  border: 1px solid #c7c7c7;
+  overflow: hidden;
+}
+
+.Dropdown-title {
+  background-color: grey;
+  padding: 4px;
+  text-align: center;
 }
 
 .Dropdown-option {
